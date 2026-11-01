@@ -2,7 +2,7 @@ import { themeColor } from "../common/constants";
 
 const Card = ({cardData})=>{
     return (
-        <div className="w-[20rem] h-[20rem] rounded-sm border border-zinc-200 shadow-sm transaction-transform duration-300 ease-in-out hover:scale-105">
+        <div className="w-[20rem] h-[20rem] rounded-sm border border-zinc-200 shadow-sm transaction-transform duration-300 ease-in-out hover:scale-102">
             <div className="h-[80%]">
                 <img className="w-[100%] h-[100%] border-b border-zinc-200" src={cardData.image} alt="" />
             </div>

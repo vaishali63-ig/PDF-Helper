@@ -88,15 +88,15 @@ const ImageToPdf = () =>{
         {
           (files == null || files.length == 0 )?( <FileInput title="Upload or Drag and Drop Images Here" allowedFileTypes={["image/jpeg", "image/png"]} setFiles={setFiles} multiple = {true}/>)
           :(
-            <div className="flex flex-col items-center">
-            <div className="flex justify-start items-center gap-5 w-[45rem]">
+            <div className="flex flex-col items-center p-4">
+            <div className="flex justify-start items-center gap-5 w-[100%] lg:w-[60%]">
                 <button onClick={HandleConversion} style={{backgroundColor:themeColor}} className={`p-1 border border-zinc-400 rounded font-semibold text-white cursor-pointer`}>Convert To Pdf</button>
                 {response.status=="success"&&<a href={response.output} download={"converted-pdf.pdf"} className="p-1 font-semibold text-white bg-green-500 rounded-sm border border-zinc-400 shadow-sm">Download Pdf</a>}
                 {response.status!=""&&(
                     <p><span>{response.status}</span>{" "}<span className={`${response.status=="success"?"text-green-500":response.status=="failed"?"text-red-500":""}`}>{response.message}</span></p>
                 )}
             </div>
-            <div className="flex flex-col items-center justify-center gap-4 border border-zinc-200 rounded-smm shadow-sm my-2 p-2 w-[45rem]">
+            <div className="flex flex-col items-center justify-center gap-4 border border-zinc-200 rounded-smm shadow-sm my-2 p-2 w-[100%] lg:w-[60%]">
                  {
                     files.map((f,i)=>{
                         return <div>

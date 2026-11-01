@@ -4,7 +4,7 @@ import Card from "../components/Card";
 
 const Home = ()=>{
     return (
-    <div className="flex p-4 bg-zinc-100 h-[100vh]">
+    <div className="flex p-4 bg-zinc-100 h-[100vh] gap-4">
         {
             cards.map(c=>{
                 return <NavLink to={c.id}>
