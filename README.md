@@ -9,7 +9,19 @@ A simple Clint side Fast Pdf Helper tool buoild with reactjs. It allows you to p
 
 ## TechStack
 - React
-- Tailwind
+- Tailwind (css)
+- vite
+
+## Packages used
+- jspdf
+- pdf-lib
+- pdfjs-dist
+- react-router
+- tailwindcss
+
+---
+Used jspdf for image to pdf conversion, pdf-lib for merge pdf files, pdfjs-dist for pdf to image conversion, tailwindcss for styling and react-router for page routes.
+---
 
 ## How To Run Locally
 
