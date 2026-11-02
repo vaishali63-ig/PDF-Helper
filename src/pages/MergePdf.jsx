@@ -87,7 +87,7 @@ const MergePdf = () =>{
                             )
                         })
                     }
-                    <p className="border border-l"></p>
+                    <p className="border border-l h-[100%] border-zinc-400"></p>
                     <button onClick={HandleMerge} style={{backgroundColor:themeColor}} className="p-1 border border-zinc-400 rounded-lg shadow-lg font-semibold text-white cursor-pointer">Merge All</button>
                     {response.status=="success"&&(
                         <a className="p-1 border border-zinc-400 rounded-lg shadow-lg text-white bg-green-500" href={response.output} download="merged-pdf.pdf">Download PDF</a>
