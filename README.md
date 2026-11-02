@@ -26,4 +26,4 @@ npm run dev
 ```
 
 ---
-More PDF tools comming soon in future updates!
+More PDF tools coming soon in future updates!
