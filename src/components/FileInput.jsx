@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { themeColor } from "../common/constants";
 
-const FileInput = ({multiple=false,setFiles,allowedFileTypes, title ="Upload or Drag and Drop File Here"})=>{
+const FileInput = ({multiple=false, maxLimit=null, minLimit=null,setFiles,allowedFileTypes, title ="Upload or Drag and Drop File Here"})=>{
     const [response,setResponse] = useState({message:"",status:""})
     const handleFile = (files)=>{
         files = Array.from(files)  
@@ -9,6 +9,14 @@ const FileInput = ({multiple=false,setFiles,allowedFileTypes, title ="Upload or 
            setResponse({message:"multipal files are not allowed",status:"failed"});
            return;
         } 
+        if (maxLimit && files.length > maxLimit){
+           setResponse({message:`maximum ${maxLimit} files are allowed`,status:"failed"});
+           return;
+        }
+        if (minLimit && files.length < minLimit){
+           setResponse({message:`minimum ${minLimit} files are required`,status:"failed"});
+           return;
+        }
         if (files.filter(f=>!allowedFileTypes.includes(f.type)).length !=0){
             setResponse({message:`only ${allowedFileTypes.map(t=>t.split("/").pop()).join(", ")} file types are allowed`,status:"failed"});
            return;

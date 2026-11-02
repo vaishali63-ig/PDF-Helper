@@ -107,7 +107,7 @@ const PdfToImage = ()=>{
             <div className="h-[100%] w-[100%] mt-4 p-2 flex flex-col items-center">
             <div className="flex justify-start gap-4 items-center w-[100%] lg:w-[50%]">
                 <button onClick={handleConversion} style={{backgroundColor:themeColor}} className="cursor-pointer p-1 border border-zinc-400 rounded-lg shadow-sm text-white font-semibold">Convert Into Images</button>
-                {response.status=="success"&&<button onClick={handleDownload} className="bg-green-500 text-white p-1 font-semibold border border-zinc-400 rounded-lg shadow-sm">Download Images</button>}
+                {response.status=="success"&&<button onClick={handleDownload} className="cursor-pointer bg-green-500 text-white p-1 font-semibold border border-zinc-400 rounded-lg shadow-sm">Download Images</button>}
                 {response.status!=""&&<p><span>{response.status}:</span> <span className={`${response.status == "success"?"text-green-500":response.status=="failed"?"text-red-500":""}`}>{response.message}</span></p>}
             </div>
                {pdfUrl!=""&&<iframe className="overflow-auto w-full h-full mt-1 w-[100%] lg:w-[50%]" src={pdfUrl} frameborder="0"></iframe>}
